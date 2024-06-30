@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="./static/cs1.css">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous" />
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/20c5629a29.js" crossorigin="anonymous"></script>
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+    integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=MuseoModerno:wght@300;500;600&display=swap">
+
+</head>
+
+<body>
+ 
+<nav class="navbar navbar-expand-lg navbar-light bg-white ">
+  <div class="container" style="display:flex; justify-content:space-between;">
+    <a class="navbar-brand food-munch-logo" href="#">
+      <p style="font-size: 42px; font-family: 'MuseoModerno', sans-serif;  margin-left:-47px;"><span><img src="./static/kidney.png" width="40" height="40"></span>  Kidney Stone Detection</p>
+    </a>
+
+
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+          <div class="navbar-nav ml-auto">
+              <a class="nav-link " id="navitem1" href="#who"><b>WHO WE ARE </b><i class="fa fa-search" style="font-size:18px"></i> </a>&nbsp;
+              <a class="nav-link" id="navitem2" href="#what"><b>WHAT WE DO </b><i class='fas fa-clipboard-list' style='font-size:18px'></i></a>&nbsp;&nbsp;
+              <a class="nav-link" id="navitem3" href="#dp"><b>Follow Us </b><i class="fa fa-telegram" style="font-size:18px"></i></a>&nbsp;&nbsp;
+              <a class="nav-link" id="navitem4" href="#faqs"><b>FAQ's </b><i class="fa fa-question-circle" style="font-size:18"></i></a>&nbsp;&nbsp;
+          </div>
+      </div>
+
+  </div>
+</nav>
+  
+
+
+<div class="input-block" style="background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQUHK4VWYT9noZNbsFDAoyDIKiSrJmP3D8_-g&usqp=CAU');"> 
+        
+  <div class="container col-5 col-lg-4">    
+      
+    <form action="/" method="post" enctype="multipart/form-data" id="uploadForm">
+      <div class="img-area" data-img="" >
+          <i class='bx bxs-cloud-upload icon'></i>
+          <h3>Upload Image</h3>
+          <p>Image size must be less than <span>2MB</span></p>
+      </div>
+      <div style="display: flex; flex-direction: row; justify-content: space-between;">
+      <input class="select-image" type="file" name="file" accept="image/*" required id="imageFileInput">
+      <button class="custom-button mb-3" type="submit">Upload Image</button>
+      </div>
+  </form>
+  
+      
+</div>
+
+<div class="container col-5 col-lg-5">    
+    <h2>Detected Image :</h2>  
+    <img style="width: 39vw; height: 30vh;" src="./static/processed_image.jpg">
+    <h3 style="margin-top: 2vh;">Number of stones detected : {{count}}</h3>
+     
+</div>
+
+</div>    
+
+
+
+
+<div id="who" class="info" style="padding: 10px; margin-top: 20px; margin-bottom: 20px; width: 70%; margin-left: auto; margin-right: auto; text-align: center; border: 1px solid #000; border-radius: 20px; box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);">
+  <h1 style="text-align: center;">WHO WE ARE</h1>
+  <div class="content">
+    <p style="text-align: justify;">
+      &bull; At Kidney Stone Detection, we are a team of dedicated professionals passionate about leveraging cutting-edge technology to address healthcare challenges.<br><br>
+      &bull; With a background in medical imaging, machine learning, and software development, our team brings together expertise from various fields to tackle the problem of kidney stone detection.<br><br>
+      &bull; We believe in the power of collaboration and innovation to improve patient outcomes and revolutionize healthcare diagnostics.<br><br>
+      &bull; Our mission is to develop advanced algorithms and tools that assist medical professionals in accurately diagnosing kidney stones, enabling timely interventions and personalized treatment plans.<br><br>
+      &bull; Driven by our commitment to excellence and patient care, we strive to push the boundaries of medical technology and make a meaningful impact on the lives of individuals suffering from kidney stones.
+    </p>
+  </div>
+</div>
+
+
+
+
+<div id="what" class="info" style="padding:10px;margin-top: 20px; margin-bottom: 20px; width: 70%; margin-left: auto; margin-right: auto; text-align: center; border: 1px solid #000; border-radius: 20px; box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);">
+  <h1 style="text-align: center;">WHAT WE DO</h1>
+  <div class="content">
+    <p style="text-align: justify;">
+      &bull; At Kidney Stone Detection, we specialize in the development of state-of-the-art algorithms and software solutions for the early detection and diagnosis of kidney stones. Leveraging the latest advancements in medical imaging and machine learning, we have created a comprehensive platform that aids healthcare providers in identifying and characterizing renal calculi with precision and efficiency.
+      <br><br>
+      &bull; Our solution utilizes advanced image processing techniques to analyze medical images, such as ultrasound and CT scans, to detect the presence of kidney stones accurately.
+      <br><br>
+      &bull; By automating the detection process and providing detailed insights into stone size, location, and composition, our software empowers healthcare professionals to make informed decisions and deliver optimal patient care.
+      <br><br>
+      &bull; In addition to our diagnostic tools, we are committed to advancing research in the field of nephrology and urology.
+      <br><br>
+      &bull; Through collaborations with medical institutions and research partners, we contribute to the development of new methodologies and therapies for kidney stone management, with the ultimate goal of improving patient outcomes and quality of life.
+      <br><br>
+      &bull; At Kidney Stone Detection, we are dedicated to innovation, accuracy, and compassion, driving our efforts to redefine kidney stone diagnosis and treatment in the modern healthcare landscape.
+    </p>
+  </div>
+</div>
+
+
+<div id="faqs" class="wrapper">
+  <h1>Frequently Asked Questions</h1>
+
+ <div class="faq">
+   <button class="accordion">
+      What is kidney stone detection?
+     <i class="fa-solid fa-chevron-down"></i>
+   </button>
+   <div class="pannel">
+     <p>
+         Kidney stone detection refers to the process of identifying and diagnosing the presence of kidney stones in the urinary tract using medical imaging techniques and diagnostic tests.
+     </p>
+   </div>
+ </div>
+
+ <div class="faq">
+   <button class="accordion">
+     Why is kidney stone detection important?
+     <i class="fa-solid fa-chevron-down"></i>
+   </button>
+   <div class="pannel">
+     <p>
+         Kidney stone detection is important for diagnosing kidney stones early, which allows for timely treatment and prevention of complications such as kidney damage and urinary tract infections.
+     </p>
+   </div>
+ </div>
+
+ <div class="faq">
+   <button class="accordion">
+     How is kidney stone detection performed?
+     <i class="fa-solid fa-chevron-down"></i>
+   </button>
+   <div class="pannel">
+     <p>
+         Kidney stone detection is typically performed through medical imaging techniques such as ultrasound, CT scan, or X-ray, which allow healthcare professionals to visualize and identify the presence of kidney stones in the urinary tract.
+     </p>
+   </div>
+ </div>
+
+ <div class="faq">
+   <button class="accordion">
+     What are the symptoms of kidney stones?
+     <i class="fa-solid fa-chevron-down"></i>
+   </button>
+   <div class="pannel">
+     <p>
+         The symptoms of kidney stones may include severe pain in the back, side, lower abdomen, or groin; pain during urination; blood in the urine; nausea and vomiting; and frequent urination.
+     </p>
+   </div>
+ </div>
+
+ <div class="faq">
+   <button class="accordion">
+     Can kidney stones be prevented?
+     <i class="fa-solid fa-chevron-down"></i>
+   </button>
+   <div class="pannel">
+     <p>
+         Yes, kidney stones can often be prevented by staying hydrated, maintaining a healthy diet low in salt and oxalate-rich foods, and avoiding certain medications and supplements that may increase the risk of stone formation.
+     </p>
+   </div>
+ </div>
+
+ <div class="faq">
+   <button class="accordion">
+     How are kidney stones treated?
+     <i class="fa-solid fa-chevron-down"></i>
+   </button>
+   <div class="pannel">
+     <p>
+         Treatment for kidney stones may include pain management medications, hydration therapy, extracorporeal shock wave lithotripsy (ESWL), ureteroscopy, or surgery to remove the stones.
+     </p>
+   </div>
+ </div>
+
+ <div class="faq">
+     <button class="accordion">
+         What factors increase the risk of kidney stones?
+       <i class="fa-solid fa-chevron-down"></i>
+     </button>
+     <div class="pannel">
+       <p>
+         Risk factors for kidney stones include dehydration, diet high in salt and oxalate, obesity, family history of kidney stones, certain medical conditions (e.g., urinary tract infections, metabolic disorders), and certain medications and supplements.
+       </p>
+     </div>
+   </div>
+
+   <div class="faq">
+     <button class="accordion">
+         Can kidney stone detection be performed at home?
+       <i class="fa-solid fa-chevron-down"></i>
+     </button>
+     <div class="pannel">
+       <p>
+         While home tests for kidney stones are not as accurate as medical imaging techniques, individuals experiencing symptoms of kidney stones may use at-home test kits to assess their risk and consult a healthcare professional for further evaluation and diagnosis.
+       </p>
+     </div>
+   </div>
+
+   <div class="faq">
+     <button class="accordion">
+         What are the complications of untreated kidney stones?
+       <i class="fa-solid fa-chevron-down"></i>
+     </button>
+     <div class="pannel">
+       <p>
+         Untreated kidney stones can lead to serious complications such as kidney damage, urinary tract infections, kidney infection (pyelonephritis), urinary obstruction, and sepsis (blood infection). Prompt diagnosis and treatment are essential to prevent these complications.
+       </p>
+     </div>
+   </div>
+
+   <div class="faq">
+     <button class="accordion">
+         Is kidney stone detection covered by insurance?
+       <i class="fa-solid fa-chevron-down"></i>
+     </button>
+     <div class="pannel">
+       <p>
+         The coverage for kidney stone detection and related medical services may vary depending on the individual's insurance plan and policy. It is advisable to check with the insurance provider regarding coverage options and any out-of-pocket expenses.
+       </p>
+     </div>
+   </div>
+</div>
+
+   
+
+    <script>
+
+var acc = document.getElementsByClassName("accordion");
+    var i;
+
+    for (i = 0; i < acc.length; i++) {
+      acc[i].addEventListener("click", function () {
+        this.classList.toggle("active");
+        this.parentElement.classList.toggle("active");
+
+        var pannel = this.nextElementSibling;
+
+        if (pannel.style.display === "block") {
+          pannel.style.display = "none";
+        } else {
+          pannel.style.display = "block";
+        }
+      });
+    }
+
+
+
+       document.getElementById("imageFileInput").addEventListener("change", function(event) {
+        const file = event.target.files[0];
+        const reader = new FileReader();
+        
+        reader.onload = function(e) {
+            const imgArea = document.querySelector(".img-area");
+            imgArea.innerHTML = ''; // Clear previous content
+            
+            const img = document.createElement("img");
+            img.src = e.target.result;
+            img.style.maxWidth = "100%";
+            img.style.maxHeight = "100%";
+            imgArea.appendChild(img);
+        };
+        
+        reader.readAsDataURL(file);
+    });
+
+
+  </script>
+</body>
+
+</html>
